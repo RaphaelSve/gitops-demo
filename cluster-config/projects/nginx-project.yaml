@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: nginx
+  namespace: argocd
+spec:
+  description: "Project for Nginx applications"
+  destinations:
+    - namespace: preprod  # Le namespace autorisé pour ce projet
+      server: https://kubernetes.default.svc
+    - namespace: prod  # Le namespace autorisé pour ce projet
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - '*'  # Autorise toutes les sources Git, vous pouvez restreindre si nécessaire
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
