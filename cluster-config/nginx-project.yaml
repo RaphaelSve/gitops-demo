@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: nginx
+  name: blabla
   namespace: argocd
 spec:
   description: "Project for Nginx applications"

@@ -4,7 +4,7 @@ metadata:
   name: nginx-preprod
   namespace: argocd
 spec:
-  project: nginx
+  project: blabla
   source:
     repoURL: https://github.com/RaphaelSve/gitops-demo.git
     targetRevision: main
