@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ton-user/gitops-demo.git
+    repoURL: https://github.com/RaphaelSve/gitops-demo.git
     targetRevision: main
     path: apps/nginx/preprod
   destination:
