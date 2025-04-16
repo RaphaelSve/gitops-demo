@@ -1,19 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev
+  name: nginx-preprod
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/RaphaelSve/gitops-demo.git
+    repoURL: https://github.com/ton-user/gitops-demo.git
     targetRevision: main
-    path: apps/dev/nginx
+    path: apps/nginx/preprod
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: preprod
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
-
