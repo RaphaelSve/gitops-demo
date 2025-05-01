@@ -6,7 +6,7 @@ metadata:
 spec:
   source:
     repoURL: https://github.com/RaphaelSve/gitops-demo.git
-    path: my-tekton-chart
+    path: apps/my-tekton-chart
     targetRevision: HEAD
     helm:
       valueFiles:
